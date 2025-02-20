@@ -33,19 +33,19 @@ const RediscoverExcellence = () => {
           {cards.map((card, index) => (
             <div 
               key={index} 
-              className="bg-white rounded-lg p-6 md:p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center min-h-[320px] md:min-h-[380px] relative border-b-4 border-[#B01B2E]"
+              className="bg-white rounded-lg p-8 md:p-12 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col items-center text-center min-h-[380px] md:min-h-[450px] relative border-b-4 border-[#B01B2E]"
             >
-              <div className="bg-[#FBE9EB] p-3 md:p-4 rounded-lg mb-4 md:mb-6">
+              <div className="bg-[#FBE9EB] p-[10px] md:p-[10px] rounded-lg mb-6 md:mb-8">
                 <img 
                   src={card.icon} 
                   alt={card.title} 
-                  className="w-10 h-10 md:w-12 md:h-12"
+                  className="w-[28px] h-[28px] md:w-[72px] md:h-[72px]"
                 />
               </div>
-              <h3 className="text-lg md:text-xl font-semibold mb-3 md:mb-4 text-[#B01B2E] whitespace-pre-line">
+              <h3 className="text-xl md:text-2xl font-semibold mb-4 md:mb-6 text-[#B01B2E] whitespace-pre-line">
                 {card.title}
               </h3>
-              <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+              <p className="text-gray-600 leading-relaxed text-base md:text-lg">
                 {card.description}
               </p>
             </div>

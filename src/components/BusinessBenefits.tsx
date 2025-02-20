@@ -40,11 +40,11 @@ const BusinessBenefits = () => {
               className="bg-white rounded-lg px-6 py-8 flex flex-col items-center shadow-lg max-w-[320px] mx-auto w-full"
             >
               <div className="flex justify-center mb-5">
-                <div className="bg-[#FAEBEC] p-4 rounded-lg">
+                <div className="bg-[#FAEBEC] p-[10px] rounded-lg">
                   <img 
                     src={benefit.icon} 
                     alt={benefit.title} 
-                    className="w-12 h-12"
+                    className="w-[28px] h-[28px] md:w-[72px] md:h-[72px]"
                   />
                 </div>
               </div>
