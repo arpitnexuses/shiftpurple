@@ -26,9 +26,14 @@ const Header = () => {
 
           {/* CTA Button */}
           <div>
-            <button className="bg-[#900D24] hover:bg-red-800 text-white px-6 py-2 rounded-md text-sm font-medium pt-3 pb-3">
+            <a 
+              href="https://calendly.com/-shiftpurple/30min"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="bg-[#900D24] hover:bg-red-800 text-white px-6 py-2 rounded-md text-sm font-medium pt-3 pb-3 inline-block"
+            >
               Request a demo
-            </button>
+            </a>
           </div>
         </div>
       </div>

@@ -15,9 +15,14 @@ const Hero = () => {
         </p>
         
         <div className="flex justify-center gap-4">
-          <button className="px-8 py-4 bg-[#8B0000] text-white rounded-md hover:bg-[#6B0000] transition-colors text-xl font-semibold font-inter">
+          <a 
+            href="https://calendly.com/-shiftpurple/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="px-8 py-4 bg-[#8B0000] text-white rounded-md hover:bg-[#6B0000] transition-colors text-xl font-semibold font-inter"
+          >
             Request A Demo
-          </button>
+          </a>
         </div>
       </div>
 

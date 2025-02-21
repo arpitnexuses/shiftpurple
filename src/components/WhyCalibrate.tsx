@@ -60,11 +60,11 @@ const WhyCalibrate = () => {
 
       {/* Image Section - Full Width */}
       <div className="w-full flex justify-center">
-        <div className="max-w-[1400px] w-full px-4">
+        <div className="max-w-[1400px] w-full">
           <img 
             src={whyCalibrate} 
             alt="Calibrate Dashboard" 
-            className="w-full h-auto object-contain"
+            className="w-full h-auto object-contain mb-[-60px]"
           />
         </div>
       </div>

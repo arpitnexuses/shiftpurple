@@ -28,9 +28,14 @@ const BookDemo = () => {
               the future of work with confidence.
             </span>
           </h2>
-          <button className="bg-[#B01B2E] text-white px-10 py-4 rounded-lg text-2xl font-medium hover:bg-[#8B1624] transition-colors mt-10">
+          <a 
+            href="https://calendly.com/-shiftpurple/30min"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block bg-[#B01B2E] text-white px-10 py-4 rounded-lg text-2xl font-medium hover:bg-[#8B1624] transition-colors mt-10"
+          >
             Book A Demo
-          </button>
+          </a>
         </div>
       </div>
     </section>
