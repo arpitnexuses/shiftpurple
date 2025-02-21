@@ -64,7 +64,7 @@ const WhyCalibrate = () => {
           <img 
             src={whyCalibrate} 
             alt="Calibrate Dashboard" 
-            className="w-full h-auto object-contain mb-[-60px]"
+            className="w-full h-auto object-contain mb-[-63px]"
           />
         </div>
       </div>
