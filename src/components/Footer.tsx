@@ -97,7 +97,7 @@ const Footer = () => {
                       className="text-base text-gray-200 hover:text-white transition-all duration-300 
                                tracking-wide relative inline-block group-hover:translate-x-[-4px]"
                     >
-                      +91 9899240010
+                      +91 98992 40010
                       <span className="absolute bottom-0 right-0 w-0 h-[1px] bg-white/40 
                                      group-hover:w-full transition-all duration-300"></span>
                     </a>
