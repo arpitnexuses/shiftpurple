@@ -14,7 +14,7 @@ const Header = () => {
           </div>
 
           {/* Navigation */}
-          <nav className="hidden md:flex space-x-8">
+          {/* <nav className="hidden md:flex space-x-8">
             <Link to="/" className="text-gray-600 hover:text-gray-900">Home</Link>
             <Link to="/platform" className="text-gray-600 hover:text-gray-900">Platform</Link>
             <Link to="/benefits" className="text-gray-600 hover:text-gray-900">Benefits</Link>
@@ -22,7 +22,7 @@ const Header = () => {
             <Link to="/partners" className="text-gray-600 hover:text-gray-900">Partners</Link>
             <Link to="/about" className="text-gray-600 hover:text-gray-900">About</Link>
             <Link to="/resources" className="text-gray-600 hover:text-gray-900">Resources</Link>
-          </nav>
+          </nav> */}
 
           {/* CTA Button */}
           <div>
