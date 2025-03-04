@@ -24,7 +24,7 @@ const StartJourney = () => {
   ];
 
   return (
-    <section className="py-12 md:py-24 w-full bg-white">
+    <section className="py-12 md:py-24 w-full bg-[#FDFDFD]">
       <div className="max-w-[1400px] mx-auto px-4">
         {/* Header Part */}
         <div className="mb-10 md:mb-16 max-w-[700px]">
@@ -65,14 +65,14 @@ const StartJourney = () => {
           </div>
 
           {/* Right Image */}
-          <div className="flex-1 hidden lg:flex justify-center">
+          <div className="flex-1 hidden lg:flex justify-center bg-white">
             <video 
               src={RSJvideo} 
               autoPlay
               muted
               loop
               playsInline
-              className="max-w-[600px] w-full h-auto object-contain mt-[-100px]"
+              className="max-w-[660px] w-full h-auto object-contain mt-[-100px] bg-white"
             />
           </div>
         </div>
