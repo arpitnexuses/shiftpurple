@@ -1,6 +1,7 @@
 import bblogo1 from './asset/bblogo1.png';
 import bblogo2 from './asset/bblogo2.png';
 import bblogo3 from './asset/bblogo3.png';
+import { useScrollAnimation } from '../hooks/useScrollAnimation';
 
 const BusinessBenefits = () => {
   const benefits = [
@@ -34,28 +35,40 @@ const BusinessBenefits = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-5xl mx-auto">
-          {benefits.map((benefit, index) => (
-            <div 
-              key={index} 
-              className="bg-white rounded-lg px-6 py-8 flex flex-col items-center shadow-lg max-w-[320px] mx-auto w-full"
-            >
-              <div className="flex justify-center mb-5">
-                <div className="bg-[#FAEBEC] p-[10px] rounded-lg">
-                  <img 
-                    src={benefit.icon} 
-                    alt={benefit.title} 
-                    className="w-[28px] h-[28px] md:w-[72px] md:h-[72px]"
-                  />
+          {benefits.map((benefit, index) => {
+            const cardRef = useScrollAnimation();
+            
+            return (
+              <div 
+                ref={cardRef}
+                key={index} 
+                className="bg-white rounded-lg px-6 py-8 flex flex-col items-center shadow-lg max-w-[320px] mx-auto w-full
+                transition-all duration-300 hover:scale-105 hover:shadow-xl
+                opacity-0 translate-y-10 transition-all duration-700
+                [&.animate-in]:translate-y-0 [&.animate-in]:opacity-100"
+                style={{
+                  transitionDelay: `${index * 200}ms`
+                }}
+              >
+                <div className="flex justify-center mb-5">
+                  <div className="bg-[#FAEBEC] p-[10px] rounded-lg 
+                  transition-transform duration-300 hover:scale-110">
+                    <img 
+                      src={benefit.icon} 
+                      alt={benefit.title} 
+                      className="w-[28px] h-[28px] md:w-[72px] md:h-[72px]"
+                    />
+                  </div>
                 </div>
+                <h3 className="text-2xl font-bold mb-3 text-gray-900">
+                  {benefit.title}
+                </h3>
+                <p className="text-gray-600 text-center leading-relaxed">
+                  {benefit.description}
+                </p>
               </div>
-              <h3 className="text-2xl font-bold mb-3 text-gray-900">
-                {benefit.title}
-              </h3>
-              <p className="text-gray-600 text-center leading-relaxed">
-                {benefit.description}
-              </p>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
     </section>

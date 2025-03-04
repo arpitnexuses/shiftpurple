@@ -2,7 +2,7 @@ import React from 'react';
 import SJlogo1 from './asset/SJlogo1.png';
 import SJlogo2 from './asset/SJlogo2.png';
 import SJlogo3 from './asset/SJlogo3.png';
-import RSJimage from './asset/RSJimage.png';
+import RSJvideo from './asset/RSJvideo.mp4';
 
 const StartJourney = () => {
   const features = [
@@ -66,9 +66,12 @@ const StartJourney = () => {
 
           {/* Right Image */}
           <div className="flex-1 hidden lg:flex justify-center">
-            <img 
-              src={RSJimage} 
-              alt="Calibrate Dashboard"
+            <video 
+              src={RSJvideo} 
+              autoPlay
+              muted
+              loop
+              playsInline
               className="max-w-[600px] w-full h-auto object-contain mt-[-100px]"
             />
           </div>

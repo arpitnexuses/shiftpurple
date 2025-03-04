@@ -1,6 +1,7 @@
 import logo1 from './asset/360logo1.png';
 import logo2 from './asset/360logo2.png';
 import logo3 from './asset/360logo3.png';
+import { AnimateOnScroll } from './AnimateOnScroll';
 
 const Features = () => {
   const features = [
@@ -57,19 +58,28 @@ const Features = () => {
         {/* Right side - Feature cards */}
         <div className="space-y-8">
           {features.map((feature, index) => (
-            <div key={index} className="flex items-start space-x-6 bg-white p-6 rounded-lg shadow-sm">
-              <div className="flex-shrink-0">
-                {feature.icon}
+            <AnimateOnScroll 
+              key={index}
+              className="transition-all duration-500 delay-[${index * 200}ms]"
+            >
+              <div 
+                className="flex items-start space-x-6 bg-white p-6 rounded-lg shadow-sm 
+                  transition-all duration-300 ease-in-out hover:shadow-lg hover:scale-105 
+                  hover:bg-gray-50 cursor-pointer"
+              >
+                <div className="flex-shrink-0">
+                  {feature.icon}
+                </div>
+                <div>
+                  <h3 className="text-xl font-normal text-gray-900 mb-2">
+                    {feature.title}
+                  </h3>
+                  <p className="text-base text-gray-600 leading-relaxed">
+                    {feature.description}
+                  </p>
+                </div>
               </div>
-              <div>
-                <h3 className="text-xl font-normal text-gray-900 mb-2">
-                  {feature.title}
-                </h3>
-                <p className="text-base text-gray-600 leading-relaxed">
-                  {feature.description}
-                </p>
-              </div>
-            </div>
+            </AnimateOnScroll>
           ))}
         </div>
       </div>

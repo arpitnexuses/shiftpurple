@@ -1,4 +1,5 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const KeyBusinessInsights = () => {
   const insights = [
@@ -32,10 +33,15 @@ const KeyBusinessInsights = () => {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-[1200px] mx-auto">
-          {insights.map((insight, index) => (
-            <div 
+          {insights.map((insight: { number: string; title: string; description: string }, index: number) => (
+            <motion.div 
               key={index}
-              className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-shadow duration-300 flex flex-col min-h-[380px] relative border-b-4 border-[#B01B2E]"
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.2 }}
+              className="bg-white rounded-lg p-8 shadow-lg hover:shadow-xl transition-all duration-300 
+              transform hover:-translate-y-2 flex flex-col min-h-[380px] relative border-b-4 border-[#B01B2E]"
             >
               <div className="mb-6">
                 <h3 className="text-[56px] font-bold text-[#B01B2E] leading-tight">
@@ -48,7 +54,7 @@ const KeyBusinessInsights = () => {
                   {insight.description}
                 </p>
               </div>
-            </div>
+            </motion.div>
           ))}
         </div>
 
